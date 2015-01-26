@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>{{@site.name}}</title>
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="/public/css/founfation/normalize.css">
+    <link rel="stylesheet" href="/public/css/founfation/foundation.css">
+    <link rel="stylesheet" href="/public/css/app.css">
+    <script src="/public/js/vendor/modernizr.js"></script>
+</head>
+<body>
+    <check if="{{@message}}">
+        <div class="row">
+            <div class="small-6 small-centered large-6 large-centered columns">
+                <div data-alert class="alert-box {{@message_severity}} round">
+                    {{@message_text}}
+                    <a href="#" class="close">&times;</a>
+                </div>
+            </div>
+        </div>
+    </check>
+    <include href="{{@inc}}"></include>
+
+    <script src="/public/js/vendor/jquery.js"></script>
+    <script src="/public/js/founfation/foundation.min.js"></script>
+    <script>
+        $(document).foundation();
+    </script>
+</body>
+</html>
