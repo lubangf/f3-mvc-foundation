@@ -20,8 +20,8 @@ class BaseController {
             $this->app->set('message_severity', $session['message_severity']);
             $this->app->set('message_text', $session['message_text']);
         }
-        $this->logger = new Logger('Georeport');
-        $this->logger->pushHandler(new RotatingFileHandler($this->app->get('log_file'), $this->app->get('log_level')));
+        $this->logger = new Logger($this->app->get('AppName'));
+        $this->logger->pushHandler(new RotatingFileHandler($this->app->get('LogFile'), $this->app->get('LogLevel')));
         $this->app->concat('UI',';app/'.$module.'/views/');
         $this->app->set('LOCALES', 'app/' . $module . '/dict/'); // load module dictionary
 	}

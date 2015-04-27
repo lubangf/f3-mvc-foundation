@@ -1,5 +1,4 @@
 <?php
-
 /** @var $app Base */
 $app = require('core/f3/lib/base.php');
 
